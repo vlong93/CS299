@@ -13,15 +13,15 @@ total1 = initial * (1 + (rate1/100)) ** 18
 total2 = initial * (1 + (rate2/100)) ** 18
 total3 = initial * (1 + (rate3/100)) ** 18
 
-print("a.", total1)
-print("b.", total2)
-print("c.", total3)
+print("The total amount available after 18 years at 3% interest is $" + str(total1))
+print("The total amount available after 18 years at 5% interest is $" + str(total2))
+print("The total amount available after 18 years at 12% interest is $" + str(total3))
 
 '''
-Answers:
-a. 1702.4330612399046
-b. 2406.619233691086
-c. 7689.965795021485
+Output:
+The total amount available after 18 years at 3% interest is $1702.4330612399046
+The total amount available after 18 years at 5% interest is $2406.619233691086
+The total amount available after 18 years at 12% interest is $7689.965795021485
 '''
 
 
@@ -37,6 +37,7 @@ hypot = sqrt(leg1 ** 2 + leg2 ** 2)
 print("The hypotenuse is", hypot)
 
 '''
+Output:
 Enter length of leg 1: 5
 Enter length of leg 2: 6
 The hypotenuse is 7.810249675906654
