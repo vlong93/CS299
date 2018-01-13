@@ -87,4 +87,15 @@ Answer 2: -2.0
 
 
 # Problem #3
+#import sympy
+from sympy import symbols
+from sympy import plot
+import mpmath
+
+
+x = symbols('x')
+
+plot((x**2 + 4*x + 4), ylim=(-10, 10))
+plot((4*x**2 - 4*x + 1), xlim=[-10,10], ylim=[-10,10])
+plot((3*x**2 + 7*x + 2), xlim=[-10,10], ylim=[-10,10])
 
