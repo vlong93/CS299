@@ -1,6 +1,6 @@
 # Author: Vivian Long
 # Assignment: Lab 3
-# Completed: 1/12/2018
+# Completed: 1/16/2018
 
 import sys
 from math import sqrt
