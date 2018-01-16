@@ -1,7 +1,7 @@
 # Author: Vivian Long
 # Assignment: Project 1
-# Completed:
-'''
+# Completed: 1/16/2018
+
 # Problem #1
 # User enters initial deposit, interest rate, and number of years
 b = int(input("Enter the initial deposit: "))
@@ -13,7 +13,7 @@ balance = b * ((1 + r/100) ** n)
 
 print(balance)
 
-
+'''
 ================ RESTART: /Users/vlong/Documents/project1.py ================
 Enter the initial deposit: 1000
 Enter the interest rate: 0
@@ -44,7 +44,7 @@ Enter the interest rate: 2
 Enter the number of years: 8
 11716.593810022658
 >>> 
-
+'''
 
 # Problem #2
 from math import sqrt
@@ -61,7 +61,7 @@ root2 = (-1 * b - sqrt(b ** 2 - 4 * a * c)) / (2 * a)
 print("Answer 1:", root1)
 print("Answer 2:", root2)
 
-
+'''
 ================ RESTART: /Users/vlong/Documents/project1.py ================
 Enter a of ax^2 + bx + c = 0: 1
 Enter b of ax^2 + bx + c = 0: 4
@@ -87,15 +87,84 @@ Answer 2: -2.0
 
 
 # Problem #3
-#import sympy
-from sympy import symbols
+from sympy import var
 from sympy import plot
 import mpmath
 
+var('x')
 
-x = symbols('x')
+# Plot the 3 quadratic equations from #2
+plot((x**2 + 4*x + 4), (x, -4, 0))
+plot((4*x**2 - 4*x + 1), (x, -5, 5))
+plot((3*x**2 + 7*x + 2), (x, -3, 1))
 
-plot((x**2 + 4*x + 4), ylim=(-10, 10))
-plot((4*x**2 - 4*x + 1), xlim=[-10,10], ylim=[-10,10])
-plot((3*x**2 + 7*x + 2), xlim=[-10,10], ylim=[-10,10])
 
+'''
+
+========= RESTART: /Users/vlong/Documents/project/CS299/project1.py =========
+x**2 + 4*x + 4
+
+      4 |                                                        
+        |  .                                                    /
+        |   \                                                  / 
+        |    \                                                /  
+        |     \                                              /   
+        |      .                                            .    
+        |                                                        
+        |       ..                                         .     
+2.00066 | --------\--------------------------------------..------
+        |          \                                    /        
+        |           \                                  /         
+        |            \                                /          
+        |             ..                             /           
+        |               \                          ..            
+        |                ..                      ..              
+        |                  ..                  ..                
+        |                    ...            ...                  
+0.00132 |                       ............                     
+          -4                     -2                         0
+
+4*x**2 - 4*x + 1
+
+    121 |                                                        
+        |  .                                                     
+        |   \                                                    
+        |    \                                                   
+        |     \                                                  
+        |      \                                                 
+        |       \                                               /
+        |        \                                             / 
+60.5041 | --------\-------------------------------------------/--
+        |          ..                                        /   
+        |            \                                      /    
+        |             \                                   ..     
+        |              ..                                /       
+        |                \                             ..        
+        |                 ..                         ..          
+        |                   ...                    ..            
+        |                      ...              ...              
+0.00826 |                         ..............                 
+          -5                     0                          5
+
+3*x**2 + 7*x + 2
+11.0704 |                                                        
+        |                                                      . 
+        |                                                     /  
+        |                                                    /   
+        | \                                                 /    
+        |  \                                               /     
+        |   \                                             /      
+        |    \                                           /       
+4.49388 | ----\-----------------------------------------/--------
+        |      ..                                      /         
+        |        \                                    /          
+        |         \                                 ..           
+        |          ..                              /             
+        |            \                           ..              
+        |             ..                       ..                
+        |               ..                   ..                  
+        |                 ...             ...                    
+-2.0826 |                    .............                       
+          -3                     -1                         1
+
+'''
